@@ -4,7 +4,7 @@
  * Description: Adds Yoast fields to page and post metadata 
  * Author: jmfurlott<jmfurlott@gmail.com>
  * Author URI: https://jmfurlott.com
- * Version: 0.1
+ * Version: 0.1.1
  * Plugin URI: https://github.com/jmfurlott/wp-api-yoast
  */
 function wp_api_encode_yoast($data, $post, $context) {
@@ -20,8 +20,9 @@ function wp_api_encode_yoast($data, $post, $context) {
         'yoast_wpseo_canonical' => get_post_meta($post['ID'], '_yoast_wpseo_canonical', true),
         'yoast_wpseo_redirect' => get_post_meta($post['ID'], '_yoast_wpseo_redirect', true),
     );
-    $customMeta = (array) get_fields($post['ID']);
-    $data['meta'] = array_merge($data['meta'], $customMeta, $yoastMeta );
+
+    $data['yoast_meta'] = (array) $yoastMeta;
+
     return $data;
 }
 
