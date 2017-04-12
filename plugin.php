@@ -4,7 +4,9 @@
  * Description: Adds Yoast fields to page and post metadata 
  * Author: jmfurlott<jmfurlott@gmail.com>
  * Author URI: https://jmfurlott.com
- * Version: 0.1.1
+ * Author: nabilfreeman<nabil+oss@freemans.website>
+ * Author URI: http://freemans.website
+ * Version: 1.0.0
  * Plugin URI: https://github.com/jmfurlott/wp-api-yoast
  */
 function wp_api_encode_yoast($data, $post, $context) {
